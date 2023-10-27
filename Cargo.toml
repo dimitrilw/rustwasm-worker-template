@@ -1,7 +1,18 @@
 [package]
-name = "{{project-name}}"
+
+# TODO: revert to template name
+# name = "{{project-name}}"
+name = "rustwasm-worker-template"
+
+description = "rustwasm worker template"
+repository = "https://github.com/cloudflare/rustwasm-worker-template"
+license = "Apache-2.0"
 version = "0.1.0"
-authors = ["{{authors}}"]
+
+# TODO: revert to template authors
+# authors = ["{{authors}}"]
+authors = ["Dimitri <5898931+dimitrilw@users.noreply.github.com>"]
+
 edition = "2018"
 
 [lib]
@@ -11,8 +22,9 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-cfg-if = "0.1.2"
-worker = "0.0.9"
+getrandom = { version = "0.2", features = ["js"] }
+cfg-if = "1.0.0"
+worker = "0.0.18"
 serde_json = "1.0.67"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
